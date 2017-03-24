@@ -1,0 +1,60 @@
+<div class="container">
+
+  <div class="errors" ng-repeat="error in errors">
+    <p style="color: red;">{{error.message}}</p>
+  </div>
+  <!-- friend form -->
+  <h2>Add a Survey!</h2>
+  <form class="form-horizontal" ng-submit="create()">
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="author">Author:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="author" ng-model="survey.author" placeholder="Author..">
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="question">Question:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="question" ng-model="survey.question" placeholder="Question..">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="option">Option 1:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="option" ng-model="survey.option1" placeholder="Option 1..">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="option">Option 2:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="option" ng-model="survey.option2" placeholder="Option 2..">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="option">Option 3:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="option" ng-model="survey.option3" placeholder="Option 3..">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="option">Option 4:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="option" ng-model="survey.option4" placeholder="Option 4..">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Add Survey!</button>
+      </div>
+    </div>
+  </form>
+
+</div>

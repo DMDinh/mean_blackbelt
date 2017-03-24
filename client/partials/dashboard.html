@@ -1,0 +1,32 @@
+<h3>Current Polls! </h3>
+<a href="#!/new">Create New Poll!</a>
+<br>
+<br>
+<input type="text" ng-model="question" placeholder="Search">
+<div class ="tables" style="height: 340px; overflow: scroll;">
+<table class="table table-hover" >
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Survey Question</th>
+    <th>Date Posted</th>
+    <th>Action</th>
+  </tr>
+</thead>
+<tbody>
+
+
+  <tr ng-repeat="survey in surveys | filter:question">
+    <td>{{survey.author}}</td>
+    <td><a href="#!/poll/{{survey._id}}">{{survey.question}}</a></td>
+    <td>{{survey.created_at | date: dd-MM-YYYY}}</td>
+    <td><a ng-click="delete(survey)">Delete</a></td>
+  </tr>
+
+
+
+
+</tbody>
+</table>
+
+</div>
